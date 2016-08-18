@@ -26,14 +26,14 @@ html, body {
 */
 main {
   position: fixed;
-  top: 30px;
+  top: 0;
   bottom: 0;
   right: 0;
   left: 0;
 
   .ui-layout-column .ui-splitbar {
     background: @main-splitbar;
-    
+
     /* IE10 fixes*/
     display: -ms-flexbox;
     -ms-flex-pack: center;
@@ -43,7 +43,13 @@ main {
   .pane.editor {
     >div, .editor-wrapper {
       height: 100%;
+      display: none;
     }
+  }
+
+  .pane {
+    left: 0px !important;
+    width: 100% !important;
   }
 
   &.preview-wrapper, .preview-wrapper {
