@@ -3,8 +3,9 @@
 var _ = require('lodash');
 var angular = require('angular');
 
-SwaggerEditor.service('LocalStorage', function LocalStorage($localStorage,
+SwaggerEditor.service('LocalStorage', function LocalStorage($sessionStorage,
   $rootScope) {
+  var $localStorage = $sessionStorage;
   var storageKey = 'SwaggerEditorCache';
   var changeListeners = {};
 
